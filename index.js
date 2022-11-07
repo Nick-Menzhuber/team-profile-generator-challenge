@@ -1,10 +1,12 @@
 //define packages required for application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Manager = require('./lib/Manager');
+const Employee = require('./lib/Employee')
 
 
 //manager questions array
-const questions = [
+const managerQuestions = [
     {
         type: 'input',
         name: 'teamName',
@@ -12,23 +14,23 @@ const questions = [
       },
       {
           type: 'input',
-          name: 'managerName',
+          name: 'name',
           message: 'Please enter the team manager\'s name:',
       },
       {
           type: 'input',
-          name: 'managerId',
+          name: 'id',
           message: 'Please enter the team manager\'s employee ID number:',
       },
       {
           type: 'input',
-          name: 'managerEmail',
+          name: 'email',
           message: 'Please enter the team manager\'s email address:',
       },
       {
           type: 'input',
-          name: 'office',
-          message: 'Please enter the office number:',
+          name: 'phone',
+          message: 'Please enter your office phone number:',
       },
     ]
 
@@ -42,9 +44,9 @@ function writeToFile(fileName, data) {
 //function to initialize app
 function init() {
     inquirer
-    .prompt(questions)
+    .prompt(managerQuestions)
     .then((data) => {
-        writeToFile(`./new_readmes/${data.shortname}README.md`, generateMarkdown(data))
+        writeToFile(`./dist/${data.teamName}.html`, Manager(data), Employee(data))
     })
 }
 
