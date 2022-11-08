@@ -4,6 +4,7 @@ const fs = require('fs');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const HTMLgeneration = require('./src/HTMLgeneration');
 
 
 //define variable for newly created team
@@ -35,7 +36,7 @@ const newManager = () => {
         {
             type: 'input',
             name: 'phone',
-            message: 'Please enter your office phone number:',
+            message: 'Please enter your office phone number:'
         }
         ])
         .then((data => {
@@ -63,6 +64,7 @@ const decisionPoint = () => {
                 newIntern();
             } else {
                 console.log('Okay, you\'re all done!')
+                writeHTML();
             }
             })
         }
@@ -88,7 +90,7 @@ const newEngineer = () => {
             {
                 type: 'input',
                 name: 'gitHub',
-                message: 'Please enter the engineer\s GitHub ID:',
+                message: 'Please enter the engineer\s GitHub ID:'
             }
             ])
             .then((data => {
@@ -129,6 +131,12 @@ const newEngineer = () => {
                 console.log(`Welcome to the team, ${data.name}!`);
                 decisionPoint();
             }))
+    }
+
+    //function to create HTML file
+    function writeHTML() {
+        console.log(newTeam)
+        fs.writeFileSync('./dist/team.html', createHTML(newTeam))
     }
 
     //function call to initialize app
