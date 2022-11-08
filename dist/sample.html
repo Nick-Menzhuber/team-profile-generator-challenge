@@ -16,38 +16,38 @@
     <nav class="navbar bg-light">
         <div class="container-fluid justify-content-center text-white bg-secondary">
             <i class="fa-solid fa-people-group"></i>
-            <span class="navbar-brand mb-0 h1 m-2">Team Profile</span>
+            <span class="navbar-brand mb-0 h1 m-2"> ${data.teamName}</span>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">Obi-Wan Kenobi<br /><br /><i class="fa-solid fa-mug-hot"></i> Manager</h5>
+                    <h5 class="card-header bg-primary text-white">${data.name}<br /><br /><i class="fa-solid fa-mug-hot"></i> Manager</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: 57848</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:obiwan@jedicouncil.net">obiwan@jedicouncil.net</a></li>
-                        <li class="list-group-item">Office Phone: (612) 846-9455</li>
+                        <li class="list-group-item">ID: ${data.id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${data.email}">${data.email}</a></li>
+                        <li class="list-group-item">Office Phone: ${data.phone}</li>
                     </ul>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">Anakin Skywalker<br /><br /><i class="fa-solid fa-glasses"></i> Engineer</h5>
+                    <h5 class="card-header bg-primary text-white">${data.name}<br /><br /><i class="fa-solid fa-glasses"></i> Engineer</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: 67246</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:skyguy@yahoo.com">skyguy@yahoo.com</a></li>
-                        <li class="list-group-item">GitHub: <a href="https://github.com/greatest-jedi-ever">greatest-jedi-ever</a></li>
+                        <li class="list-group-item">ID: ${data.id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${data.email}">${data.email}</a></li>
+                        <li class="list-group-item">GitHub: <a href="https://github.com/${data.github}">${data.github}</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">Ahsoka Tano<br /><br /><i class="fa-solid fa-graduation-cap"></i> Intern</h5>
+                    <h5 class="card-header bg-primary text-white">${data.name}<br /><br /><i class="fa-solid fa-graduation-cap"></i> Intern</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: 648664</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:snips@gmail.com">snips@gmail.com</a></li>
-                        <li class="list-group-item">School: Schrute Farms Beet Bootcamp</li>
+                        <li class="list-group-item">ID: ${data.id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${data.email}">${data.email}</a></li>
+                        <li class="list-group-item">${data.school</li>
                     </ul>
                 </div>
             </div>
