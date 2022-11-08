@@ -46,6 +46,7 @@ const newManager = () => {
         }))
 }
 
+//prompts user to add new team member or say they are done, reroutes as appropriate
 const decisionPoint = () => {
     return inquirer
         .prompt([{

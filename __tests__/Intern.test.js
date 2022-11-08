@@ -25,4 +25,8 @@ describe("intern object populates and operates as expected", () => {
     it("returns getSchool method", ()=> {
         expect(intern.getSchool()).toBe("Coruscant Jedi Temple")
     })
+
+    it("returns getJobType method", ()=> {
+        expect(intern.getJobType()).toBe("Intern")
+    })
 })

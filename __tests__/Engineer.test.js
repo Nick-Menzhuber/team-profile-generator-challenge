@@ -25,4 +25,8 @@ describe("engineer object populates and operates as expected", () => {
     it("returns getGitHub method", ()=> {
         expect(engineer.getGitHub()).toBe("greatest-jedi-ever")
     })
+
+    it("returns getJobType method", ()=> {
+        expect(engineer.getJobType()).toBe("Engineer")
+    })
 })

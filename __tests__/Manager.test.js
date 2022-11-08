@@ -25,4 +25,8 @@ describe("manager object populates and operates as expected", () => {
     it("returns getPhone method", ()=> {
         expect(manager.getPhone()).toBe("(612) 123-4567")
     })
+
+    it("returns getJobType method", ()=> {
+        expect(manager.getJobType()).toBe("Manager")
+    })
 })
