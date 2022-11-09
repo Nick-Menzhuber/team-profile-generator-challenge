@@ -1,7 +1,12 @@
 function createHTML(newTeam) {
+    let navAndManager;
+    let engineerCard = [];
+    let internCard = [];
     for (let i = 0; i < newTeam.length; i++) {
+        console.log(newTeam)
+        console.log(newTeam[0].getJobType())
         if (newTeam[i].getJobType() === "Manager") {
-            const navAndManager =
+            navAndManager =
                 `
 <!DOCTYPE html>
 <html lang="en">
@@ -21,47 +26,47 @@ function createHTML(newTeam) {
     <nav class="navbar bg-light">
         <div class="container-fluid justify-content-center text-white bg-secondary">
             <i class="fa-solid fa-people-group"></i>
-            <span class="navbar-brand mb-0 h1 m-2"> ${Manager.teamName}</span>
+            <span class="navbar-brand mb-0 h1 m-2"> ${newTeam[i].teamName}</span>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">${Manager.name}<br /><br /><i class="fa-solid fa-mug-hot"></i> Manager</h5>
+                    <h5 class="card-header bg-primary text-white">${newTeam[i].name}<br /><br /><i class="fa-solid fa-mug-hot"></i> Manager</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: ${Manager.id}</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:${Manager.email}">${Manager.email}</a></li>
-                        <li class="list-group-item">Office Phone: ${Manager.phone}</li>
+                        <li class="list-group-item">ID: ${newTeam[i].id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${newTeam[i].email}">${newTeam[i].email}</a></li>
+                        <li class="list-group-item">Office Phone: ${newTeam[i].phone}</li>
                     </ul>
                 </div>
             </div>
             
             `
         } else if (newTeam[i].getJobType() === "Engineer") {
-            const engineerCard =
+            engineerCard =
             `
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">${Engineer.name}<br /><br /><i class="fa-solid fa-glasses"></i> Engineer</h5>
+                    <h5 class="card-header bg-primary text-white">${newTeam[i].name}<br /><br /><i class="fa-solid fa-glasses"></i> Engineer</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: ${Engineer.id}</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:${Engineer.email}">${Engineer.email}</a></li>
-                        <li class="list-group-item">GitHub: <a href="https://github.com/${Engineer.gitHub}">${Engineer.gitHub}</a></li>
+                        <li class="list-group-item">ID: ${newTeam[i].id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${newTeam[i].email}">${newTeam[i].email}</a></li>
+                        <li class="list-group-item">GitHub: <a href="https://github.com/${newTeam[i].gitHub}">${newTeam[i].gitHub}</a></li>
                     </ul>
                 </div>
             </div>
             `
         } else if (newTeam[i].getJobType() === "Intern") {
-            const internCard =
+            internCard =
             `
             <div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                    <h5 class="card-header bg-primary text-white">${Intern.name}<br /><br /><i class="fa-solid fa-graduation-cap"></i> Intern</h5>
+                    <h5 class="card-header bg-primary text-white">${newTeam[i].name}<br /><br /><i class="fa-solid fa-graduation-cap"></i> Intern</h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: ${Intern.id}</li>
-                        <li class="list-group-item">Email Address: <a href="mailto:${Intern.email}">${Intern.email}</a></li>
-                        <li class="list-group-item">${Intern.school}</li>
+                        <li class="list-group-item">ID: ${newTeam[i].id}</li>
+                        <li class="list-group-item">Email Address: <a href="mailto:${newTeam[i].email}">${newTeam[i].email}</a></li>
+                        <li class="list-group-item">${newTeam[i].school}</li>
                     </ul>
                 </div>
             </div>
@@ -82,4 +87,4 @@ page = navAndManager + engineerCard + internCard + endTemplate
 return page;
 }
 
-module.export = HTMLgeneration;
+module.exports = createHTML;
