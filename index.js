@@ -138,7 +138,7 @@ const newEngineer = () => {
         let page = HTMLgeneration(newTeam);
         console.log(page)
         //createHTML(page)
-        fs.writeFile('./teamprofile.html', page, (err) =>
+        fs.writeFile(`./dist/${newTeam[0].teamName}.html`, page, (err) =>
         err ? console.log(err) : console.log('Your team has been created!'))
     }
     //function call to initialize app
