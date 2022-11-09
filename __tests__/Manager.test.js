@@ -1,9 +1,10 @@
 const Manager = require('../lib/Manager')
-const manager = new Manager("Obi-Wan Kenobi", "1", "obiwan@jedicouncil.net", "(612) 123-4567")
+const manager = new Manager("Jedi Team", "Obi-Wan Kenobi", "1", "obiwan@jedicouncil.net", "(612) 123-4567")
 
 describe("manager object populates and operates as expected", () => {
 
     it("returns the manager object with correct information", () => {
+        expect(manager.teamName).toBe("Jedi Team");
         expect(manager.name).toBe("Obi-Wan Kenobi");
         expect(manager.id).toBe("1");
         expect(manager.email).toBe("obiwan@jedicouncil.net");
