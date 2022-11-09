@@ -136,8 +136,6 @@ const newEngineer = () => {
     //function to create HTML file
     function writeHTML() {
         let page = HTMLgeneration(newTeam);
-        console.log(page)
-        //createHTML(page)
         fs.writeFile(`./dist/${newTeam[0].teamName}.html`, page, (err) =>
         err ? console.log(err) : console.log('Your team has been created!'))
     }

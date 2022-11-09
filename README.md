@@ -1,4 +1,4 @@
-# team-profile-generator-challenge
+# Team Profile Generator Challenge
   
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -30,7 +30,7 @@ Simply run the application in node and answer the prompts and your HTML file wil
 
 [Github Link](https://github.com/Nick-Menzhuber/team-profile-generator-challenge)
 
-[Video Walkthrough](https://drive.google.com/file/d/11tow80zcGnpo77dWS8H3XYfRfqet-6OV/view?usp=share_link)
+[Video Walkthrough](https://watch.screencastify.com/v/KcajsDWSTNDfHSIlHhiI)
 
 
 
